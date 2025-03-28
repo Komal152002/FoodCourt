@@ -1,0 +1,200 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #0f0f0f;
+  }
+  
+  /* Header Styling */
+  .header {
+    background-color: #e00271;
+    padding: 20px;
+    color: white;
+    
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 38px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(253, 232, 232);
+    font-size: 22px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 90vh;
+    background: url('image/food-court.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(249, 244, 244);
+  }
+  
+  .hero-content h2 {
+    font-size: 48px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    background-color: #0e0706;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Menu Section */
+  .menu {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+  }
+  
+  .menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .menu-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+  }
+  
+  .menu-item h3 {
+    margin: 10px 0;
+  }
+  
+  .menu-item span {
+    color: #ff6347;
+    font-weight: bold;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px;
+    background-color: #ffe4e1;
+    text-align: center;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .contact input, 
+  .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    background-color: #e00271;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .contact button:hover {
+    background-color: #e00271;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #e00271;
+    color: rgb(11, 10, 10);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: medium;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-content h2 {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-content h2 {
+      font-size: 24px;
+    }
+  }
+  

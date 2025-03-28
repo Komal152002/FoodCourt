@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <title>Order Food</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+
+    h1 {
+      font-size: 34px;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h1>Order Your Food</h1>
+
+      <form action="https://example.com/submit-order" method="POST">
+        <label for="foodItem">Select Food:</label>
+        <select id="foodItem" name="foodItem" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Burger">Burger</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Salad">Salad</option>
+          <option value="Pizza">samosa</option>
+          <option value="Burger">Dosa</option>
+          <option value="Pasta">Sandwich</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required />
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <!-- <button type="submit">Place Order</button> -->
+        <!-- Use Javascript -->
+        <button type="submit" onclick="confirmOrder()">Place Order</button>
+
+        <script>
+          function confirmOrder() {
+            const confirmed = confirm(
+              "Are you sure you want to place this order..?"
+            );
+            if (confirmed) {
+              alert("Order placed successfully..🥰!");
+              // Optionally submit the form or take additional action
+            } else {
+              alert("Order canceled.");
+            }
+          }
+        </script>
+      </form>
+    </div>
+  </body>
+</html>
